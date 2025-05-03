@@ -1,0 +1,96 @@
+/* Priority colors */
+.priority-high {
+  border-left: 4px solid #ef4444; /* red-500 */
+}
+
+.priority-medium {
+  border-left: 4px solid #f59e0b; /* amber-500 */
+}
+
+.priority-low {
+  border-left: 4px solid #10b981; /* emerald-500 */
+}
+
+/* Task hover effect */
+.task-item:hover {
+  background-color: #f9fafb; /* gray-50 */
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+/* Voice command active state */
+.voice-active {
+  background-color: #ec4899; /* pink-500 */
+  color: white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7d2fe;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a5b4fc;
+}
+
+
+/* User dropdown styles */
+#user-menu {
+  transition: all 0.2s ease-out;
+  transform-origin: top right;
+}
+
+#user-menu.hidden {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+#user-menu:not(.hidden) {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+
+/* Logout button loading state */
+#logout-btn .fa-spinner {
+  margin-right: 0.5rem;
+}
+
+/* User dropdown animations */
+#user-menu {
+  transition: all 0.2s ease;
+  transform-origin: top right;
+  opacity: 0;
+  transform: scale(0.95);
+  display: block !important;
+}
+
+#user-menu:not(.hidden) {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Confirmation dialog styling */
+.confirm-dialog {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.confirm-dialog-content {
+  animation: dialogFadeIn 0.3s ease-out;
+}
+
+@keyframes dialogFadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
